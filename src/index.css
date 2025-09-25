@@ -13,7 +13,7 @@
 @layer components {
   html,
   body {
-    @apply bg-[#FDF5ED] text-base;
+    @apply bg-white text-base;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
