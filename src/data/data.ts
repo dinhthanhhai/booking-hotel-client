@@ -1,4 +1,4 @@
-import type { HeaderLink, SidebarLink } from "@/types/types";
+import type { HeaderLink, SidebarLink, StayOption } from "@/types/types";
 
 export const ListLinkHeader: HeaderLink[] = [
   {
@@ -95,5 +95,30 @@ export const ListSidebarLink: SidebarLink[] = [
     name: "Giới thiệu nhận quà",
     url: "gioi-thieu-nhan-qua",
     icon: "/icons/link.png",
+  },
+];
+
+export const stayOptionList: StayOption[] = [
+  {
+    id: 1,
+    name: "Đi một mình",
+    note: "1 phòng, 1 người lớn",
+  },
+  {
+    id: 2,
+    name: "Đi cặp đôi/2 người",
+    note: "1 phòng, 2 người lớn",
+  },
+  {
+    id: 3,
+    name: "Đi theo gia đình",
+  },
+  {
+    id: 4,
+    name: "Đi theo nhóm",
+  },
+  {
+    id: 5,
+    name: "Đi công tác",
   },
 ];

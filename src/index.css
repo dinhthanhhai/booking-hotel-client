@@ -3,9 +3,11 @@
 @theme {
   --color-primary: #f36;
   --breakpoint-xs: 480px;
+  --breakpoint-base: 1366px;
   --breakpoint-3xl: 1920px;
   --text-xs: 10px;
   --font-400: 400;
+  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
 }
 
 @layer components {
@@ -19,5 +21,21 @@
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
+  }
+
+  .rdrCalendarWrapper {
+    width: 100% !important;
+  }
+  .rdrMonth {
+    width: 100% !important;
+  }
+
+  @media (max-width: 420px) {
+    .rdrMonth {
+      padding: 0 !important;
+    }
+    .rdrNextPrevButton {
+      margin: 0 !important;
+    }
   }
 }

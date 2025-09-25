@@ -150,7 +150,7 @@ const Header: React.FC = () => {
         </button>
       </div>
       {/* Links */}
-      <div className="flex-1">
+      <div className="hidden sm:block sm:flex-1">
         <div ref={containerRef} className="flex gap-4 relative h-full">
           {visibleItems.map((item) => (
             <a

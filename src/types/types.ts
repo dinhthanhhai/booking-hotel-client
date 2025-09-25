@@ -9,3 +9,9 @@ export interface SidebarLink {
   url: string;
   icon: string;
 }
+
+export interface StayOption {
+  id: number;
+  name: string;
+  note?: string;
+}
