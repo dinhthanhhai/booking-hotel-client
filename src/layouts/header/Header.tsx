@@ -8,13 +8,12 @@ import {
   Bell,
 } from "lucide-react";
 import { ListLinkHeader } from "@/data/data";
-import { useLocation } from "react-router-dom";
 import flag from "@/assets/icons/icon_lang_vi.png";
 import Sidebar from "@/layouts/sidebar/Sidebar";
 import type { HeaderLink } from "@/types/types";
+import { NavLink, Link } from "react-router-dom";
 
 const Header: React.FC = () => {
-  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleItems, setVisibleItems] =
@@ -93,9 +92,9 @@ const Header: React.FC = () => {
         <div className="w-full flex items-center justify-between">
           {/* Logo */}
           <div className="flex flex-col items-center gap-1">
-            <a href="/" className="text-4xl font-bold text-pink-600">
+            <Link to="/" className="text-4xl font-bold text-pink-600">
               mytour
-            </a>
+            </Link>
             <span className="hidden text-xs text-pink-600 sm:block">
               Yên tâm du lịch quốc tế
             </span>
@@ -104,35 +103,36 @@ const Header: React.FC = () => {
           <div className="hidden items-center gap-5 md:flex">
             <div className="hidden xl:flex gap-1 items-center">
               <Gift className="text-pink-600 w-6 h-6" />
-              <a href="/uu-dai" className="font-400">
+              <NavLink to="/uu-dai" className="font-400">
                 Mã giảm giá và ưu đãi
-              </a>
+              </NavLink>
             </div>
             <div className="hidden xl:flex gap-1 items-center">
               <BriefcaseBusiness className="text-pink-600 w-6 h-6" />
-              <a
-                href="#"
+              <NavLink
+                to="#"
                 className="rounded bg-pink-50 px-2 py-1 flex flex-col"
               >
                 <span className="text-sm font-semibold">
                   Mytour for Business
                 </span>
                 <span className="text-xs text-pink-600">Hoàn tiền tới 5%</span>
-              </a>
+              </NavLink>
             </div>
             <div className="hidden lg:flex gap-1 items-center">
               <NotepadText className="text-gray-600 w-6 h-6" />
-              <a href="#" className="text-gray-600">
+              <NavLink
+                to="/kiem-tra-tinh-trang-dat-ve"
+                className="text-gray-600"
+              >
                 Tìm kiếm đơn hàng
-              </a>
+              </NavLink>
             </div>
-            <div className="flex gap-1 items-center font-semibold">
+            <button className="flex gap-1 items-center font-semibold">
               <img src={flag} alt="flag" className="w-5 h-5" />
-              <a href="#" className="text-gray-600">
-                VND
-              </a>
+              <span className="text-gray-600">VND</span>
               <ChevronDown className="w-4 h-4" />
-            </div>
+            </button>
             <div>
               <Bell className="w-5 h-5" />
             </div>
@@ -152,15 +152,14 @@ const Header: React.FC = () => {
       {/* Links */}
       <div className="hidden sm:block sm:flex-1">
         <div ref={containerRef} className="flex gap-4 relative h-full">
-          {visibleItems.map((item) => (
-            <a
-              key={item.url}
-              href={`/${item.url}`}
-              className={`font-medium hover:text-pink-600 h-full pt-2 ${
-                location.pathname === `/${item.url}`
-                  ? "text-pink-600 border-b-2 border-pink-600"
-                  : ""
-              }`}
+          {visibleItems.map((item, index) => (
+            <NavLink
+              key={index}
+              to={`/${item.url}`}
+              className={({ isActive }) =>
+                "font-medium hover:text-pink-600 h-full pt-2 " +
+                (isActive ? "text-pink-600 border-b-3 border-pink-600" : "")
+              }
             >
               <span className="whitespace-nowrap">{item.name}</span>
               {item?.note && (
@@ -168,7 +167,7 @@ const Header: React.FC = () => {
                   {item?.note}
                 </span>
               )}
-            </a>
+            </NavLink>
           ))}
 
           {overflowItems.length > 0 && (
@@ -182,14 +181,15 @@ const Header: React.FC = () => {
               {open && (
                 <div className="absolute w-[240px] right-0 top-10 bg-white shadow-sm rounded p-2 z-50">
                   {overflowItems.map((item) => (
-                    <a
+                    <NavLink
                       key={item.url}
-                      href={`/${item.url}`}
-                      className={`block p-2 font-medium hover:text-pink-600 whitespace-nowrap ${
-                        location.pathname === `/${item.url}`
+                      to={`/${item.url}`}
+                      className={({ isActive }) =>
+                        "block p-2 font-medium hover:text-pink-600 whitespace-nowrap" +
+                        (isActive
                           ? "text-pink-600 border-b-2 border-pink-600"
-                          : ""
-                      }`}
+                          : "")
+                      }
                     >
                       <span className="">{item.name}</span>
                       {item?.note && (
@@ -197,7 +197,7 @@ const Header: React.FC = () => {
                           {item?.note}
                         </span>
                       )}
-                    </a>
+                    </NavLink>
                   ))}
                 </div>
               )}

@@ -2,6 +2,7 @@ import React from "react";
 import { X } from "lucide-react";
 import { ListSidebarLink } from "@/data/data";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -37,9 +38,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
             <div key={index} className="flex flex-col gap-2">
               <div className="flex gap-5 items-center">
                 <img src={item.icon} alt="icon" className="w-5 h-5" />
-                <a href={`/${item.url}`} className="text-base">
+                <Link to={`/${item.url}`} className="text-base">
                   {item.name}
-                </a>
+                </Link>
               </div>
               {ListSidebarLink.length !== index + 1 && (
                 <hr className="text-slate-300 w-full" />
