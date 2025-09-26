@@ -87,7 +87,7 @@ const Header: React.FC = () => {
   }, [mobileOpen]);
 
   return (
-    <header className="w-full bg-white h-[100px] fixed z-50 top-0 flex flex-col px-[60px]">
+    <header className="w-full bg-white h-[100px] fixed z-50 top-9 flex flex-col px-[60px]">
       <div className="mt-1 h-[56px] flex">
         <div className="w-full flex items-center justify-between">
           {/* Logo */}

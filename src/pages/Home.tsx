@@ -1,14 +1,61 @@
 import SearchBar from "@/components/home/SearchBar";
 import CouponList from "@/components/home/CouponList";
 import FlashSale from "@/components/home/FlashSale";
+import HotelByLocation from "@/components/home/HotelByLocation";
+import Discover from "@/components/home/Discover";
+import MytourChoices from "@/components/home/MytourChoices";
+import Prevailing from "@/components/home/Prevailing";
+import RecentlyViewed from "@/components/home/RecentlyViewed";
+import StrategicPartner from "@/components/home/StrategicPartner";
+import ShockPriceHotels from "@/components/home/ShockPriceHotels";
+import TopHotels from "@/components/home/TopHotels";
+import Footer from "@/layouts/footer/Footer";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white">
       <SearchBar />
       <CouponList />
       <FlashSale />
-      <div className="bg-amber-300 h-[1000px]"></div>
+      <HotelByLocation />
+      <Discover />
+      <MytourChoices />
+      <Prevailing />
+      <RecentlyViewed />
+      <StrategicPartner />
+      <ShockPriceHotels />
+      <TopHotels />
+      <div className="px-[10%] xl:px-[12%] pt-8 pb-5 bg-white">
+        <div className="flex flex-col gap-5 lg:flex-row items-center rounded-2xl shadow-sm border-[1px] border-slate-100 px-6 py-5">
+          <div className="flex items-center">
+            <img
+              src="/icons/icon_mail_red.svg"
+              className="w-16 h-16"
+              alt="mail-icon"
+            />
+            <div className="flex-1 ml-6">
+              <p className="font-semibold text-lg">
+                Bạn muốn tiết kiệm tới 50% khi đặt phòng khách sạn, vé máy bay?
+              </p>
+              <p>
+                Nhập số điện thoại để Mytour có thể gửi đến bạn những chương
+                trình khuyến mại mới nhất!
+              </p>
+            </div>
+          </div>
+
+          <div className="flex h-11">
+            <input
+              placeholder="Nhập số điện thoại"
+              className="bg-slate-200 px-3 py-2 w-[180px] xs:w-[250px] sm:w-[280px] rounded-l-lg outline-0 font-semibold tracking-widest text-lg placeholder:text-sm xs:placeholder:text-base text-slate-700"
+            />
+            <button className="bg-[#FF3366] text-white px-3 py-2 rounded-r-lg text-lg flex-shrink-0">
+              Đăng ký
+            </button>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

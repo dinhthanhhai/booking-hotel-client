@@ -6,6 +6,7 @@
   --breakpoint-base: 1366px;
   --breakpoint-3xl: 1920px;
   --text-xs: 10px;
+  --text-12: 12px;
   --font-400: 400;
   --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
 }

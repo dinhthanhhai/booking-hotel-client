@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ShockPriceHotels: React.FC = () => {
   return (
-    <div className="px-[10%] xl:px-[12%] pb-10 bg-[#EDF6F9]">
+    <div className="px-[10%] xl:px-[12%] pt-10 pb-10 bg-[#EDF6F9]">
       <div>
         <p className="text-2xl font-semibold">
           Khách sạn giá sốc chỉ có trên Mytour

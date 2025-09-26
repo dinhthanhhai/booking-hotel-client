@@ -15,3 +15,9 @@ export interface StayOption {
   name: string;
   note?: string;
 }
+
+export interface City {
+  id: string;
+  name: string;
+  cit_alias: string;
+}
