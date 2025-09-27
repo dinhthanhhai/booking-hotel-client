@@ -82,8 +82,8 @@ const SearchBar: React.FC = () => {
           {/* Địa điểm */}
           <div
             className="flex-1 flex flex-col xl:w-1/3 relative px-6 py-3
-            after:absolute after:left-4 after:bottom-1 after:h-[2px] after:bg-pink-600 after:w-0 after:transition-all after:duration-300 
-            focus-within:after:w-[95%]"
+            after:absolute after:left-6 after:bottom-1 after:h-[2px] after:bg-pink-600 after:w-0 after:transition-all after:duration-300 
+            focus-within:after:w-[calc(100%-48px)]"
           >
             <label className="text-sm text-gray-500">Địa điểm</label>
             <input
@@ -104,9 +104,9 @@ const SearchBar: React.FC = () => {
           <div className={"flex flex-col sm:flex-row xl:w-2/3"}>
             <div
               className={`flex gap-2 justify-between flex-1 px-6 py-3 relative
-              after:absolute after:left-4 after:bottom-1 after:h-[2px] after:bg-pink-600
+              after:absolute after:left-6 after:bottom-1 after:h-[2px] after:bg-pink-600
               after:transition-all after:duration-300
-              ${openTime ? "after:w-full" : "after:w-0"}
+              ${openTime ? "after:w-[calc(100%-48px)]" : "after:w-0"}
             `}
               onClick={() => setOpenTime(true)}
             >
@@ -153,8 +153,8 @@ const SearchBar: React.FC = () => {
           </div>
         </div>
         {openLocation && (
-          <div className="w-[80%] base:max-w-[1200px] h-[400px] p-4 bg-white shadow rounded-lg flex absolute left-1/2 -translate-x-1/2 bottom:0 mt-2">
-            <div className="w-1/3">
+          <div className="w-[80%] base:max-w-[1200px] p-4 bg-white shadow rounded-lg flex flex-col sm:flex-row absolute left-1/2 -translate-x-1/2 bottom:0 mt-2 z-10">
+            <div className="w-full sm:w-1/3 min-w-[220px]">
               <div className="flex justify-between items-center rounded-lg bg-slate-50 p-4">
                 <span className="font-semibold text-xl">Tìm kiếm gần đây</span>
                 <button className="text-pink-500 font-medium">
@@ -177,16 +177,33 @@ const SearchBar: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="w-2/3 px-4">
+            <div className="w-full sm:w-2/3 px-4 mt-4 sm:mt-0">
               <span className="text-lg font-semibold">Địa điểm nổi bật</span>
-              <div className=""></div>
+              <div className="flex gap-3 md:gap-[6%] md:gap-y-4 justify-start md:justify-between flex-wrap sm:px-3 py-2">
+                {[
+                  [...Array(18)].map((_, index) => (
+                    <div
+                      key={index}
+                      className="flex-shink-0 flex flex-col justify-center"
+                    >
+                      <img
+                        src="/images/nha-trang.webp"
+                        className="w-20 h-20 object-cover rounded-full hidden md:block"
+                      />
+                      <span className="md:px-0 px-3 md:py-0 py-2 md:rounded-none rounded-md md:bg-white bg-slate-100">
+                        Nha Trang
+                      </span>
+                    </div>
+                  )),
+                ]}
+              </div>
             </div>
           </div>
         )}
         {openTime && (
           <div
             ref={ref}
-            className="w-[80%] base:max-w-[800px] p-4 bg-white shadow rounded-lg flex absolute left-1/2 -translate-x-1/2 bottom:0 mt-2"
+            className="w-[80%] base:max-w-[800px] p-4 bg-white shadow rounded-lg flex absolute left-1/2 -translate-x-1/2 bottom:0 mt-2 z-10"
           >
             <div className="flex-1">
               <DateRange
@@ -218,10 +235,10 @@ const SearchBar: React.FC = () => {
         {openRoom && (
           <div
             ref={popupRef}
-            className="mx-auto mt-2 bg-white shadow rounded-lg overflow-hidden flex justify-center w-[80%] md:w-fit"
+            className="mx-auto mt-2 bg-white shadow rounded-lg overflow-hidden flex justify-center w-[80%] md:w-fit relative z-10"
           >
             <div
-              className={`md:w-[200px] flex flex-col bg-slate-200 ${
+              className={`md:w-[200px] flex flex-col bg-slate-100 ${
                 stayOption && stayOption?.id >= 3 ? "w-1/3" : "w-full"
               }`}
             >

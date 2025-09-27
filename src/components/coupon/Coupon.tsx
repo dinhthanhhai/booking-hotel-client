@@ -5,7 +5,7 @@ const Coupon: React.FC = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
-    <div className="flex w-full bg-[#FFF5F7]">
+    <div className="flex w-full bg-[#FFF5F7] relative z-0">
       <div
         className="w-2/3 p-4 relative rounded-lg border-t border-l border-b border-t-pink-500 border-l-pink-500 border-b-pink-500 border-r border-r-pink-500"
         style={{ borderRightStyle: "dashed" }}
@@ -42,8 +42,6 @@ const Coupon: React.FC = () => {
         <button className="mt-2 bg-[#FF3366] text-white text-lg px-3 py-1 rounded-lg font-medium">
           Sao chép
         </button>
-
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-white border border-pink-500 rounded-full -translate-x-1/2"></div>
       </div>
       {openModal && (
         <div className="fixed z-50 inset-0 bg-black/30">
