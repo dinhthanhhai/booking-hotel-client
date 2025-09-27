@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "@/layouts/header/Header";
 import Banner from "@/layouts/banner/Banner";
-import Home from "@/pages/Home";
+import HomePage from "@/pages/HomePage";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <main className="pt-[136px]">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
     </BrowserRouter>

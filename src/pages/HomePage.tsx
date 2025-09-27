@@ -1,17 +1,17 @@
-import SearchBar from "@/components/home/SearchBar";
-import CouponList from "@/components/home/CouponList";
-import FlashSale from "@/components/home/FlashSale";
-import HotelByLocation from "@/components/home/HotelByLocation";
-import Discover from "@/components/home/Discover";
-import MytourChoices from "@/components/home/MytourChoices";
-import Prevailing from "@/components/home/Prevailing";
-import RecentlyViewed from "@/components/home/RecentlyViewed";
-import StrategicPartner from "@/components/home/StrategicPartner";
-import ShockPriceHotels from "@/components/home/ShockPriceHotels";
-import TopHotels from "@/components/home/TopHotels";
+import SearchBar from "@/components/HomePage/SearchBar";
+import CouponList from "@/components/HomePage/CouponList";
+import FlashSale from "@/components/HomePage/FlashSale";
+import HotelByLocation from "@/components/HomePage/HotelByLocation";
+import Discover from "@/components/HomePage/Discover";
+import MytourChoices from "@/components/HomePage/MytourChoices";
+import Prevailing from "@/components/HomePage/Prevailing";
+import RecentlyViewed from "@/components/HomePage/RecentlyViewed";
+import StrategicPartner from "@/components/HomePage/StrategicPartner";
+import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
+import TopHotels from "@/components/HomePage/TopHotels";
 import Footer from "@/layouts/footer/Footer";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="bg-white">
       <SearchBar />
