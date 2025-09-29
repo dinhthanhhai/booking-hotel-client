@@ -25,7 +25,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-40 bg-black/50" onClick={closeSidebar}>
+    <div
+      className="fixed inset-0 z-50 bg-black/50 top-9"
+      onClick={closeSidebar}
+    >
       <div
         className="absolute top-0 right-0 h-full w-[320px] bg-white shadow-lg p-4 overflow-y-auto"
         onClick={(e) => e.stopPropagation()} // chặn click bên trong sidebar không đóng

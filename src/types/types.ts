@@ -21,3 +21,8 @@ export interface City {
   name: string;
   cit_alias: string;
 }
+
+export interface SimpleType {
+  id: number;
+  name: string;
+}

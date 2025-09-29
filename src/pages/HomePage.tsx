@@ -10,10 +10,15 @@ import StrategicPartner from "@/components/HomePage/StrategicPartner";
 import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
 import TopHotels from "@/components/HomePage/TopHotels";
 import Footer from "@/layouts/footer/Footer";
+import Header from "@/layouts/header/Header";
 
 export default function HomePage() {
   return (
     <div className="bg-white">
+      <div className="mb-[100px]">
+        <Header />
+      </div>
+
       <SearchBar />
       <CouponList />
       <FlashSale />
@@ -55,7 +60,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

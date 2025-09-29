@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, forwardRef } from "react";
 import {
   Menu,
   Gift,
@@ -13,7 +13,7 @@ import Sidebar from "@/layouts/sidebar/Sidebar";
 import type { HeaderLink } from "@/types/types";
 import { NavLink, Link } from "react-router-dom";
 
-const Header: React.FC = () => {
+const Header = forwardRef<HTMLDivElement>((_, ref) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleItems, setVisibleItems] =
@@ -87,7 +87,10 @@ const Header: React.FC = () => {
   }, [mobileOpen]);
 
   return (
-    <header className="w-full bg-white h-[100px] fixed z-50 top-9 flex flex-col px-[60px]">
+    <header
+      ref={ref}
+      className="w-full bg-white h-[100px] fixed z-45 top-9 flex flex-col px-[60px]"
+    >
       <div className="mt-1 h-[56px] flex">
         <div className="w-full flex items-center justify-between">
           {/* Logo */}
@@ -171,7 +174,7 @@ const Header: React.FC = () => {
           ))}
 
           {overflowItems.length > 0 && (
-            <div className="relative">
+            <div className="relative z-50">
               <button
                 className="px-2 py-1 font-bold"
                 onClick={() => setOpen(!open)}
@@ -211,6 +214,6 @@ const Header: React.FC = () => {
       )}
     </header>
   );
-};
+});
 
 export default Header;
