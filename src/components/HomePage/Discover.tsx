@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Discover: React.FC = () => {
   return (
-    <div className="px-[10%] xl:px-[12%] pt-10 pb-12 bg-[#FFF5F7]">
+    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-10 pb-12 bg-[#FFF5F7]">
       <div className="text-2xl font-semibold">Sang trọng & Đẳng cấp</div>
       <div className="text-slate-500">
         Nâng tầm du lịch với các top thương hiệu khách sạn, biệt thự hàng đầu
@@ -31,8 +31,8 @@ const Discover: React.FC = () => {
               Vinpearl, FLC, Mường Thanh...
             </span>
             <div className="flex gap-1 items-center ml-auto rounded-md px-1 hover:bg-pink-50">
-              <span className="text-pink-600">Khám phá</span>
-              <ChevronRight className="w-4 h-4 text-pink-600" />
+              <span className="text-[#FF3366]">Khám phá</span>
+              <ChevronRight className="w-4 h-4 text-[#FF3366]" />
             </div>
           </div>
         </Link>
@@ -57,8 +57,8 @@ const Discover: React.FC = () => {
               Sang trọng, hiện đại, có bể bơi, sân vườn...
             </span>
             <div className="flex gap-1 items-center ml-auto rounded-md px-1 hover:bg-pink-50">
-              <span className="text-pink-600">Khám phá</span>
-              <ChevronRight className="w-4 h-4 text-pink-600" />
+              <span className="text-[#FF3366]">Khám phá</span>
+              <ChevronRight className="w-4 h-4 text-[#FF3366]" />
             </div>
           </div>
         </Link>
@@ -80,8 +80,8 @@ const Discover: React.FC = () => {
               Giảm 20% giá phòng khách sạn
             </span>
             <div className="flex gap-1 items-center ml-auto rounded-md px-1 hover:bg-pink-50">
-              <span className="text-pink-600">Khám phá</span>
-              <ChevronRight className="w-4 h-4 text-pink-600" />
+              <span className="text-[#FF3366]">Khám phá</span>
+              <ChevronRight className="w-4 h-4 text-[#FF3366]" />
             </div>
           </div>
         </Link>

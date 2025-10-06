@@ -24,7 +24,7 @@ const FlashSale: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="px-[10%] xl:px-[12%] pt-8 pb-10 bg-[#FFF5F7]">
+    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-8 pb-10 bg-[#FFF5F7]">
       <div className="flex gap-1 justify-between">
         <div>
           <img
@@ -38,11 +38,11 @@ const FlashSale: React.FC = () => {
               <span className="px-1 rounded-md bg-[#FF3366] text-white text-sm flex items-center">
                 00
               </span>
-              <span className="text-pink-600">:</span>
+              <span className="text-[#FF3366]">:</span>
               <span className="px-1 rounded-md bg-[#FF3366] text-white text-sm flex items-center">
                 00
               </span>
-              <span className="text-pink-600">:</span>
+              <span className="text-[#FF3366]">:</span>
               <span className="px-1 rounded-md bg-[#FF3366] text-white text-sm flex items-center">
                 00
               </span>
@@ -97,6 +97,11 @@ const FlashSale: React.FC = () => {
           className="absolute top-[52%] -right-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
         >
           <ChevronRight className="w-5 h-5 text-gray-700" />
+        </button>
+      </div>
+      <div className="w-full mt-5 flex justify-center">
+        <button className="px-4 py-2 rounded-md border border-[#FF3366] text-[#FF3366]">
+          Xem thêm
         </button>
       </div>
     </div>

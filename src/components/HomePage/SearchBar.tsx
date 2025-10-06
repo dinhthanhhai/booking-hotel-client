@@ -73,16 +73,16 @@ const SearchBar: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-[420px] bg-[url('/banner/banner_hotel.jpg')] bg-cover bg-center z-0">
+    <div className="hidden omd:block w-full h-[420px] bg-[url('/banner/banner_hotel.jpg')] bg-cover bg-center z-0">
       <div className="w-full h-full relative">
-        <h2 className="w-[80%] base:max-w-[1200px] mx-auto text-3xl font-semibold text-white pt-12 pb-8 leading-10 font">
+        <h2 className="mx-4 omd:mx-[12%] xl:mx-[15%] text-3xl font-semibold text-white pt-12 pb-8 leading-10 font">
           Khách sạn
         </h2>
-        <div className="w-[80%] base:max-w-[1200px] bg-white shadow rounded-lg flex flex-col xl:flex-row mx-auto overflow-hidden">
+        <div className="mx-4 omd:mx-[12%] xl:mx-[15%] bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
           {/* Địa điểm */}
           <div
             className="flex-1 flex flex-col xl:w-1/3 relative px-6 py-3
-            after:absolute after:left-6 after:bottom-1 after:h-[2px] after:bg-pink-600 after:w-0 after:transition-all after:duration-300 
+            after:absolute after:left-6 after:bottom-1 after:h-[2px] after:bg-[#FF3366] after:w-0 after:transition-all after:duration-300 
             focus-within:after:w-[calc(100%-48px)]"
           >
             <label className="text-sm text-gray-500">Địa điểm</label>
@@ -104,7 +104,7 @@ const SearchBar: React.FC = () => {
           <div className={"flex flex-col sm:flex-row xl:w-2/3"}>
             <div
               className={`flex gap-2 justify-between flex-1 px-6 py-3 relative
-              after:absolute after:left-6 after:bottom-1 after:h-[2px] after:bg-pink-600
+              after:absolute after:left-6 after:bottom-1 after:h-[2px] after:bg-[#FF3366]
               after:transition-all after:duration-300
               ${openTime ? "after:w-[calc(100%-48px)]" : "after:w-0"}
             `}
@@ -136,7 +136,7 @@ const SearchBar: React.FC = () => {
             </div>
             <div className="flex-1 px-6 py-2 flex justify-between items-center gap-1">
               <div
-                className={`flex flex-col mt-1 relative after:absolute after:left-0 after:-bottom-[6px] after:h-[2px] after:bg-pink-600 after:transition-all after:duration-300 ${
+                className={`flex flex-col mt-1 relative after:absolute after:left-0 after:-bottom-[6px] after:h-[2px] after:bg-[#FF3366] after:transition-all after:duration-300 ${
                   openRoom ? "after:w-full" : "after:w-0"
                 } `}
                 onClick={() => setOpenRoom(true)}
@@ -146,7 +146,7 @@ const SearchBar: React.FC = () => {
                   1 phòng, 2 người lớn, 0 trẻ em
                 </p>
               </div>
-              <button className="bg-pink-600 flex items-center justify-center  rounded-lg px-6 h-12">
+              <button className="bg-[#FF3366] flex items-center justify-center  rounded-lg px-6 h-12">
                 <Search className="w-7 h-7 text-white" />
               </button>
             </div>
@@ -157,7 +157,7 @@ const SearchBar: React.FC = () => {
             <div className="w-full sm:w-1/3 min-w-[220px]">
               <div className="flex justify-between items-center rounded-lg bg-slate-50 p-4">
                 <span className="font-semibold text-xl">Tìm kiếm gần đây</span>
-                <button className="text-pink-500 font-medium">
+                <button className="text-[#FF3366] font-medium">
                   Xóa lịch sử tìm kiếm
                 </button>
               </div>
@@ -247,9 +247,9 @@ const SearchBar: React.FC = () => {
                   <div
                     key={index}
                     onClick={() => setStayOption(item)}
-                    className={`relative flex flex-col px-4 py-2 border-b border-slate-300 hover:text-pink-600 cursor-pointer ${
+                    className={`relative flex flex-col px-4 py-2 border-b border-slate-300 hover:text-[#FF3366] cursor-pointer ${
                       stayOption?.id === item.id
-                        ? "after:absolute after:h-full after:w-[3px] after:top-0 after:left-0 after:bg-pink-600 bg-white"
+                        ? "after:absolute after:h-full after:w-[3px] after:top-0 after:left-0 after:bg-[#FF3366] bg-white"
                         : ""
                     }`}
                   >
@@ -260,9 +260,9 @@ const SearchBar: React.FC = () => {
                   <div
                     key={index}
                     onClick={() => setStayOption(item)}
-                    className={`relative flex justify-between px-4 py-4 border-b border-slate-300 hover:text-pink-600 cursor-pointer ${
+                    className={`relative flex justify-between px-4 py-4 border-b border-slate-300 hover:text-[#FF3366] cursor-pointer ${
                       stayOption?.id === item.id
-                        ? "after:absolute after:h-full after:w-[3px] after:top-0 after:left-0 after:bg-pink-600 bg-white"
+                        ? "after:absolute after:h-full after:w-[3px] after:top-0 after:left-0 after:bg-[#FF3366] bg-white"
                         : ""
                     }`}
                   >

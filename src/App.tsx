@@ -3,17 +3,21 @@ import Footer from "@/layouts/footer/Footer";
 import Banner from "@/layouts/banner/Banner";
 import HomePage from "@/pages/HomePage";
 import SearchPage from "@/pages/SearchPage";
+import HotelPage from "@/pages/HotelPage";
+import HotelHomePage from "@/pages/HotelHomePage";
 
 function App() {
   return (
     <BrowserRouter>
       <Banner />
-      <main className="pt-9">
+      <div className="pt-9">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/khach-san" element={<HotelHomePage />} />
+          <Route path="/khach-san/123" element={<HotelPage />} />
         </Routes>
-      </main>
+      </div>
       <Footer />
     </BrowserRouter>
   );

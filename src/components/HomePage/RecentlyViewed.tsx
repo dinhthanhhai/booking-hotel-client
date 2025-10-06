@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const RecentlyViewed: React.FC = () => {
   return (
-    <div className="px-[10%] xl:px-[12%] pb-10 bg-white">
+    <div className="px-4 omd:px-[12%] xl:px-[15%] pb-10 bg-white">
       <p className="text-2xl font-semibold">Xem gần đây</p>
       <div className="mt-5 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5">
         {[...Array(6)].map((_, i) => (

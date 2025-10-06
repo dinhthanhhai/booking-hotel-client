@@ -1,5 +1,5 @@
 import SearchBar from "@/components/HomePage/SearchBar";
-import SlideCoupon from "@/components/coupon/SlideCoupon";
+import CouponList from "@/components/HomePage/CouponList";
 import FlashSale from "@/components/HomePage/FlashSale";
 import HotelByLocation from "@/components/HomePage/HotelByLocation";
 import Discover from "@/components/HomePage/Discover";
@@ -16,7 +16,7 @@ export default function HomePage() {
     <div className="bg-white">
       <MainHeader />
       <SearchBar />
-      <SlideCoupon />
+      <CouponList />
       <FlashSale />
       <HotelByLocation />
       <Discover />

@@ -22,7 +22,7 @@ const TopHotels: React.FC = () => {
   }, []);
 
   return (
-    <div className="px-[10%] xl:px-[12%] pt-9 pb-10 bg-white">
+    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-9 pb-10 bg-white">
       <p className="text-2xl font-semibold">Các khách sạn hàng đầu</p>
       <div className="mt-5 grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
         {!isSmall || showAll

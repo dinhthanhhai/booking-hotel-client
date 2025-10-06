@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-[#F7FAFC] px-[10%] xl:px-[12%] py-8">
+    <div className="bg-[#F7FAFC] px-4 omd:px-[12%] xl:px-[15%] py-8">
       <p className="text-5xl text-[#FF3366] font-bold">mytour</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 xs:gap-5 pt-10 pb-7 border-b-2 border-slate-300">
         <div className="text-12 text-slate-600 flex flex-col gap-2">

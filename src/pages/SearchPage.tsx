@@ -95,7 +95,7 @@ export default function SearchPage() {
         <Filter close={handleCloseFilter} />
       </div>
       <div
-        className="px-[5%] lg:px-[10%] xl:px-[12%] flex gap-5 bg-[#FAFCFF]"
+        className="px-[5%] lg:px-4 omd:px-[12%] xl:px-[15%] flex gap-5 bg-[#FAFCFF]"
         style={{ marginTop: visible ? headerHeight : searchHeight }}
       >
         <div className="w-[24%] min-w-[230px] hidden md:block">

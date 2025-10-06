@@ -84,7 +84,7 @@ const MiniSearchBar = forwardRef<HTMLDivElement, MiniSearchBarProps>(
     return (
       <div className="w-full bg-[#F4F8FA]">
         <div ref={ref} className="w-full h-full relative py-5">
-          <div className="mx-[5%] lg:mx-[10%] xl:mx-[12%] bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
+          <div className="mx-4 omd:mx-[12%] xl:mx-[15%] bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
             {/* Địa điểm */}
             <div className="flex-1 flex">
               <div
@@ -161,7 +161,7 @@ const MiniSearchBar = forwardRef<HTMLDivElement, MiniSearchBarProps>(
                     1 phòng, 2 người lớn, 0 trẻ em
                   </p>
                 </div>
-                <button className="bg-[#FF3366] flex items-center justify-center  rounded-lg px-6 h-12 hover:bg-pink-700 cursor-pointer">
+                <button className="bg-[#FF3366] flex items-center justify-center  rounded-lg px-6 h-12 hover:bg-[#FF3366] cursor-pointer">
                   <Search className="w-7 h-7 text-white" />
                 </button>
               </div>
@@ -174,7 +174,7 @@ const MiniSearchBar = forwardRef<HTMLDivElement, MiniSearchBarProps>(
                   <span className="font-semibold text-xl">
                     Tìm kiếm gần đây
                   </span>
-                  <button className="text-pink-500 font-medium">
+                  <button className="text-[#FF3366] font-medium">
                     Xóa lịch sử tìm kiếm
                   </button>
                 </div>

@@ -13,7 +13,7 @@ import Sidebar from "@/layouts/sidebar/Sidebar";
 import type { HeaderLink } from "@/types/types";
 import { NavLink, Link } from "react-router-dom";
 
-const Header = forwardRef<HTMLDivElement>((_, ref) => {
+const HeaderDesktop = forwardRef<HTMLDivElement>((_, ref) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleItems, setVisibleItems] =
@@ -216,4 +216,4 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
   );
 });
 
-export default Header;
+export default HeaderDesktop;

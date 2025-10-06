@@ -9,7 +9,7 @@ import type {
 export const ListLinkHeader: HeaderLink[] = [
   {
     name: "Khách sạn",
-    url: "",
+    url: "khach-san",
   },
   {
     name: "Vé máy bay",
@@ -56,6 +56,11 @@ export const ListSidebarLink: SidebarLink[] = [
     name: "Yêu thích",
     url: "yeu-thich",
     icon: "/icons/heart.png",
+  },
+  {
+    name: "Khách sạn",
+    url: "khach-san",
+    icon: "/icons/hotel.png",
   },
   {
     name: "Vé máy bay",

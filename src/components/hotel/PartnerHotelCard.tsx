@@ -47,7 +47,7 @@ const PartnerHotelCard: React.FC<Props> = ({ className }) => {
               alt="icon"
               className="w-4 h-4"
             />
-            <span className="text-sm font-medium text-pink-600">9.0</span>
+            <span className="text-sm font-medium text-[#FF3366]">9.0</span>
           </div>
           <span className="truncate">Tuyệt vời</span>
           <span className="text-slate-700">(28 đánh giá)</span>

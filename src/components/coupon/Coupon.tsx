@@ -7,12 +7,12 @@ const Coupon: React.FC = () => {
   return (
     <div className="flex w-full bg-[#FFF5F7] relative z-0">
       <div
-        className="w-2/3 p-4 relative rounded-lg border-t border-l border-b border-t-pink-500 border-l-pink-500 border-b-pink-500 border-r border-r-pink-500"
+        className="w-2/3 p-4 relative rounded-lg border-t border-l border-b border-t-[#FF3366] border-l-[#FF3366] border-b-[#FF3366] border-r border-r-[#FF3366]"
         style={{ borderRightStyle: "dashed" }}
       >
         {/* Hình tròn */}
         <div className="w-6 h-3 overflow-hidden  absolute -top-[1px] -right-3">
-          <div className="w-6 h-6 bg-white border border-pink-500 rounded-full -translate-y-1/2"></div>
+          <div className="w-6 h-6 bg-white border border-[#FF3366] rounded-full -translate-y-1/2"></div>
         </div>
         <h3 className="text-xl font-semibold text-gray-900 line-clamp-1">
           Giảm 8% đơn đặt phòng khách sạn
@@ -20,23 +20,23 @@ const Coupon: React.FC = () => {
         <p className="text-sm text-gray-500 mt-2">Hạn sử dụng: 30/09</p>
         <p className="text-sm text-gray-500">Nhập mã khi thanh toán</p>
         <p
-          className="text-sm text-pink-500 mt-1 underline cursor-pointer"
+          className="text-sm text-[#FF3366] mt-1 underline cursor-pointer"
           onClick={() => setOpenModal(true)}
         >
           Điều kiện &amp; thể lệ chương trình
         </p>
         {/* Hình tròn */}
         <div className="w-6 h-3 overflow-hidden absolute -bottom-[1px] -right-3">
-          <div className="w-6 h-6 bg-white border border-pink-500 rounded-full"></div>
+          <div className="w-6 h-6 bg-white border border-[#FF3366] rounded-full"></div>
         </div>
       </div>
 
       <div
-        className="w-1/3 flex flex-col justify-center items-center p-4 rounded-lg border-t border-r border-b border-t-pink-500 border-r-pink-500 border-b-pink-500 border-l border-l-pink-500"
+        className="w-1/3 flex flex-col justify-center items-center p-4 rounded-lg border-t border-r border-b border-t-[#FF3366] border-r-[#FF3366] border-b-[#FF3366] border-l border-l-[#FF3366]"
         style={{ borderLeftStyle: "dashed" }}
       >
         <span className="text-lg">Nhập mã</span>
-        <span className="text-pink-500 font-bold text-xl overflow-hidden text-ellipsis whitespace-nowrap max-w-full">
+        <span className="text-[#FF3366] font-bold text-xl overflow-hidden text-ellipsis whitespace-nowrap max-w-full">
           DIUDANG255
         </span>
         <button className="mt-2 bg-[#FF3366] text-white text-lg px-3 py-1 rounded-lg font-medium">

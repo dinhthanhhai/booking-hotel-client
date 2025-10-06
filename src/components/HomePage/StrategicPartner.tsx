@@ -24,7 +24,7 @@ const StrategicPartner: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="px-[10%] xl:px-[12%] pb-10 bg-white">
+    <div className="px-4 omd:px-[12%] xl:px-[15%] pb-10 bg-white">
       <div>
         <p className="text-2xl font-semibold">
           Vinpearl - Đối tác chiến lược giá độc quyền
