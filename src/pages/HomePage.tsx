@@ -10,6 +10,7 @@ import StrategicPartner from "@/components/HomePage/StrategicPartner";
 import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
 import TopHotels from "@/components/HomePage/TopHotels";
 import MainHeader from "@/layouts/header/MainHeader";
+import ListFlight from "@/components/HomePage/ListFlight";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,8 @@ export default function HomePage() {
       <MainHeader />
       <SearchBar />
       <SlideCoupon />
+      <ListFlight />
+      <ShockPriceHotels />
       <FlashSale />
       <HotelByLocation />
       <Discover />
@@ -24,7 +27,6 @@ export default function HomePage() {
       <Prevailing />
       <RecentlyViewed />
       <StrategicPartner />
-      <ShockPriceHotels />
       <TopHotels />
       <div className="px-4 omd:px-[12%] xl:px-[15%] pt-8 pb-5 bg-white">
         <div className="flex flex-col gap-5 lg:flex-row items-center rounded-2xl shadow-sm border-[1px] border-slate-100 px-6 py-5">

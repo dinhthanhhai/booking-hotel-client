@@ -1,5 +1,5 @@
 import SearchBar from "@/components/HomePage/SearchBar";
-import CouponList from "@/components/HomePage/CouponList";
+import CouponList from "@/components/HotelHomePage/CouponList";
 import FlashSale from "@/components/HomePage/FlashSale";
 import HotelByLocation from "@/components/HomePage/HotelByLocation";
 import Discover from "@/components/HomePage/Discover";
