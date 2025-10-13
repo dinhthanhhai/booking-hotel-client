@@ -58,5 +58,5 @@
 }
 
 @utility custom-page-margin {
-  @apply mx-4 omd:mx-[12%] xl:mx-[15%];
+  @apply mx-4 omd:mx-[8%] xl:mx-[12%];
 }

@@ -1,11 +1,7 @@
-import SearchBar from "@/components/HomePage/SearchBar";
+import SearchFull from "@/components/search/SearchFull";
 import SlideCoupon from "@/components/coupon/SlideCoupon";
 import FlashSale from "@/components/HomePage/FlashSale";
-import HotelByLocation from "@/components/HomePage/HotelByLocation";
-import Discover from "@/components/HomePage/Discover";
-import MytourChoices from "@/components/HomePage/MytourChoices";
 import Prevailing from "@/components/HomePage/Prevailing";
-import RecentlyViewed from "@/components/HomePage/RecentlyViewed";
 import StrategicPartner from "@/components/HomePage/StrategicPartner";
 import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
 import TopHotels from "@/components/HomePage/TopHotels";
@@ -17,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <MainHeader />
-      <SearchBar />
+      <SearchFull />
       <SlideCoupon />
       <FlashSale />
       <ListFlight />
