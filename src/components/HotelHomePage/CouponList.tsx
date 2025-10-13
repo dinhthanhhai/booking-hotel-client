@@ -3,7 +3,7 @@ import Coupon from "@/components/coupon/Coupon";
 
 const CouponList: React.FC = () => {
   return (
-    <div className="mx-4 omd:mx-[12%] xl:mx-[15%] mt-8 mb-10">
+    <div className="custom-page-margin mt-8 mb-10">
       <p className="text-2xl font-semibold">
         Mã giảm giá <span className="text-[#FF3366]">(2)</span>
       </p>

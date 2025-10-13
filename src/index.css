@@ -41,3 +41,11 @@
     }
   }
 }
+
+@utility custom-page-padding {
+  @apply px-4 omd:px-[8%] xl:px-[12%];
+}
+
+@utility custom-page-margin {
+  @apply mx-4 omd:mx-[12%] xl:mx-[15%];
+}

@@ -25,7 +25,7 @@ const MytourChoices: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-8 pb-10 bg-white">
+    <div className="custom-page-padding pt-8 pb-10 bg-white">
       <div className="flex gap-1 justify-between">
         <div>
           <div className="flex gap-2 items-center">

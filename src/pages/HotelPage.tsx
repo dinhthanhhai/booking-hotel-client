@@ -78,7 +78,7 @@ export default function HotelPage() {
         <MiniSearchBar ref={searchRef} />
       </div>
       <div
-        className="px-[5%] lg:px-4 omd:px-[12%] xl:px-[15%] bg-[#FAFCFF] h-[1000px]"
+        className="px-[5%] lg:custom-page-padding bg-[#FAFCFF] h-[1000px]"
         style={{ marginTop: visible ? headerHeight : searchHeight }}
       >
         <div>

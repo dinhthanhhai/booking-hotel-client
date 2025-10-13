@@ -30,7 +30,7 @@ const SlideCoupon: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="px-4 omd:px-[12%] xl:px-[15%] pb-10 bg-white mt-10">
+    <div className="custom-page-padding pb-10 bg-white mt-10">
       <div className="relative">
         <div ref={sliderRef} className="keen-slider overflow-x-auto">
           {[...Array(5)].map((_, i) => (

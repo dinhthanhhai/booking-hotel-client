@@ -29,7 +29,7 @@ const HotelByLocation: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-10 pb-12">
+    <div className="custom-page-padding pt-10 pb-12">
       <div className="text-2xl font-semibold">Khách sạn theo địa điểm</div>
       <div className="mt-10 relative">
         <div ref={sliderRef} className="keen-slider">

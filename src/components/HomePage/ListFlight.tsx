@@ -25,7 +25,7 @@ const ListFlight: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-8 pb-10 bg-white">
+    <div className="custom-page-padding pt-8 pb-10 bg-white">
       <div className="flex flex-col gap-1">
         <div className="flex flex-col sm:flex-row gap-2">
           <span className="text-2xl font-semibold">Chuyến bay giá tốt từ</span>

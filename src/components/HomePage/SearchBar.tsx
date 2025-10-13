@@ -75,10 +75,10 @@ const SearchBar: React.FC = () => {
   return (
     <div className="hidden omd:block w-full h-[420px] bg-[url('/banner/banner_hotel.jpg')] bg-cover bg-center z-0">
       <div className="w-full h-full relative">
-        <h2 className="mx-4 omd:mx-[12%] xl:mx-[15%] text-3xl font-semibold text-white pt-12 pb-8 leading-10 font">
+        <h2 className="custom-page-margin text-3xl font-semibold text-white pt-12 pb-8 leading-10 font">
           Khách sạn
         </h2>
-        <div className="mx-4 omd:mx-[12%] xl:mx-[15%] bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
+        <div className="custom-page-margin bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
           {/* Địa điểm */}
           <div
             className="flex-1 flex flex-col xl:w-1/3 relative px-6 py-3

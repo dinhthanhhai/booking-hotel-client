@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Discover: React.FC = () => {
   return (
-    <div className="px-4 omd:px-[12%] xl:px-[15%] pt-10 pb-12 bg-[#FFF5F7]">
+    <div className="custom-page-padding pt-10 pb-12 bg-[#FFF5F7]">
       <div className="text-2xl font-semibold">Sang trọng & Đẳng cấp</div>
       <div className="text-slate-500">
         Nâng tầm du lịch với các top thương hiệu khách sạn, biệt thự hàng đầu

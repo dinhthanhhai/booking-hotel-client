@@ -84,7 +84,7 @@ const MiniSearchBar = forwardRef<HTMLDivElement, MiniSearchBarProps>(
     return (
       <div className="w-full bg-[#F4F8FA]">
         <div ref={ref} className="w-full h-full relative py-5">
-          <div className="mx-4 omd:mx-[12%] xl:mx-[15%] bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
+          <div className="custom-page-margin bg-white shadow rounded-lg flex flex-col xl:flex-row overflow-hidden">
             {/* Địa điểm */}
             <div className="flex-1 flex">
               <div

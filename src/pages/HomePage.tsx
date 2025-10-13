@@ -11,6 +11,7 @@ import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
 import TopHotels from "@/components/HomePage/TopHotels";
 import MainHeader from "@/layouts/header/MainHeader";
 import ListFlight from "@/components/HomePage/ListFlight";
+import MytourMall from "@/components/HomePage/MytourMall";
 
 export default function HomePage() {
   return (
@@ -18,17 +19,14 @@ export default function HomePage() {
       <MainHeader />
       <SearchBar />
       <SlideCoupon />
+      <FlashSale />
       <ListFlight />
       <ShockPriceHotels />
-      <FlashSale />
-      <HotelByLocation />
-      <Discover />
-      <MytourChoices />
-      <Prevailing />
-      <RecentlyViewed />
+      <MytourMall />
       <StrategicPartner />
+      <Prevailing />
       <TopHotels />
-      <div className="px-4 omd:px-[12%] xl:px-[15%] pt-8 pb-5 bg-white">
+      <div className="custom-page-padding pt-8 pb-5 bg-white">
         <div className="flex flex-col gap-5 lg:flex-row items-center rounded-2xl shadow-sm border-[1px] border-slate-100 px-6 py-5">
           <div className="flex items-center">
             <img
