@@ -24,23 +24,24 @@ const HeaderMobile = forwardRef<HTMLDivElement>((_, ref) => {
               </Link>
             </div>
             <div className="items-center gap-3 flex">
-              <button className="flex gap-1 items-center font-semibold">
+              <button className="flex gap-1 items-center font-semibold px-2 py-1 border border-slate-200 rounded-2xl">
                 <img src={flag} alt="flag" className="w-5 h-5" />
                 <span className="text-gray-600">VND</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-              <div>
-                <CircleUserRound className="w-5 h-5" />
-              </div>
+              <CircleUserRound className="w-6 h-6 text-slate-600" />
             </div>
           </div>
           <button className="ml-3" onClick={() => setMobileOpen(!mobileOpen)}>
-            <Menu className="w-6 h-6" />
+            <Menu className="w-6 h-6 text-slate-600" />
           </button>
         </div>
       </header>
       <div className="grid grid-cols-3 gap-5 mt-18">
-        <div className="flex flex-col items-center justify-center relative">
+        <Link
+          to={"/khach-san"}
+          className="flex flex-col items-center justify-center relative"
+        >
           <img
             src="/icons/logo_module_hotel.png"
             className="w-15 h-15 object-cover"
@@ -49,8 +50,11 @@ const HeaderMobile = forwardRef<HTMLDivElement>((_, ref) => {
           <span className="absolute top-0 right-5 rounded-md border border-[#FF3366] bg-white text-[#FF3366] text-12 px-1">
             -400k
           </span>
-        </div>
-        <div className="flex flex-col items-center justify-center relative">
+        </Link>
+        <Link
+          to={"/ve-may-bay"}
+          className="flex flex-col items-center justify-center relative"
+        >
           <img
             src="/icons/logo_module_flight.png"
             className="w-15 h-15 object-cover"
@@ -59,15 +63,21 @@ const HeaderMobile = forwardRef<HTMLDivElement>((_, ref) => {
           <span className="absolute top-0 right-5 rounded-md border border-[#FF3366] bg-white text-[#FF3366] text-12 px-1">
             -400k
           </span>
-        </div>
-        <div className="flex flex-col items-center justify-center relative">
+        </Link>
+        <Link
+          to={"/tour-nuoc-ngoai"}
+          className="flex flex-col items-center justify-center relative"
+        >
           <img src="/icons/tour-icon.png" className="w-15 h-15 object-cover" />
           <span className="font-semibold text-center">Tour nước ngoài</span>
           <span className="absolute top-0 right-5 rounded-md border border-[#FF3366] bg-white text-[#FF3366] text-12 px-1">
             -400k
           </span>
-        </div>
-        <div className="flex flex-col items-center justify-center relative">
+        </Link>
+        <Link
+          to={"/homestay"}
+          className="flex flex-col items-center justify-center relative"
+        >
           <img
             src="/icons/logo_module_homestay.png"
             className="w-15 h-15 object-cover"
@@ -76,8 +86,11 @@ const HeaderMobile = forwardRef<HTMLDivElement>((_, ref) => {
           <span className="absolute top-0 right-5 rounded-md border border-[#FF3366] bg-white text-[#FF3366] text-12 px-1">
             -400k
           </span>
-        </div>
-        <div className="flex flex-col items-center justify-center relative">
+        </Link>
+        <Link
+          to={"/budgethotels"}
+          className="flex flex-col items-center justify-center relative"
+        >
           <img
             src="/icons/hotel_budget.svg"
             className="w-15 h-15 object-cover"
@@ -86,25 +99,31 @@ const HeaderMobile = forwardRef<HTMLDivElement>((_, ref) => {
           <span className="absolute top-0 right-5 rounded-md border border-[#FF3366] bg-white text-[#FF3366] text-12 px-1">
             -400k
           </span>
-        </div>
+        </Link>
       </div>
       <div className="m-4 grid grid-cols-2 gap-4">
-        <div className="flex gap-2 items-center p-2 bg-[#FCF3E6] rounded-lg">
+        <Link
+          to="/kiem-tra-tinh-trang-dat-ve"
+          className="flex gap-2 items-center p-2 bg-[#FCF3E6] rounded-lg"
+        >
           <img
             src="/icons/rectangle-list-solid-full.svg"
             alt="icon"
             className="w-6 h-7 object-cover"
           />
           <span className="font-semibold">Tìm kiếm đơn hàng</span>
-        </div>
-        <div className="flex gap-2 items-center p-2 bg-[#E8F9FE] rounded-lg">
+        </Link>
+        <Link
+          to={"/uu-dai"}
+          className="flex gap-2 items-center p-2 bg-[#E8F9FE] rounded-lg"
+        >
           <img
             src="/icons/ticket-solid-full.svg"
             alt="icon"
             className="w-6 h-7 object-cover"
           />
           <span className="font-semibold">Ưu đãi</span>
-        </div>
+        </Link>
       </div>
 
       <Sidebar isOpen={mobileOpen} closeSidebar={handleCloseSidebar} />
