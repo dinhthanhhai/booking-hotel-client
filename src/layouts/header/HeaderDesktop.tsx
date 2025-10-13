@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, forwardRef } from "react";
+import { useEffect, useRef, useState, forwardRef } from "react";
 import {
   Menu,
   Gift,
@@ -21,7 +21,12 @@ const HeaderDesktop = forwardRef<HTMLDivElement>((_, ref) => {
   const [overflowItems, setOverflowItems] = useState<HeaderLink[]>([]);
   const [open, setOpen] = useState(false);
 
-  const handleCloseSidebar = () => {
+  // Đóng mở sidebar
+  const showDrawer = () => {
+    setMobileOpen(true);
+  };
+
+  const onClose = () => {
     setMobileOpen(false);
   };
 
@@ -80,12 +85,6 @@ const HeaderDesktop = forwardRef<HTMLDivElement>((_, ref) => {
     return () => resizeObserver.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (mobileOpen) {
-      setOpen(false);
-    }
-  }, [mobileOpen]);
-
   return (
     <header
       ref={ref}
@@ -104,13 +103,13 @@ const HeaderDesktop = forwardRef<HTMLDivElement>((_, ref) => {
           </div>
           {/* Utility + Auth */}
           <div className="hidden items-center gap-5 md:flex">
-            <div className="hidden xl:flex gap-1 items-center">
+            <div className="hidden xl:flex gap-1 items-center hover:rounded-3xl hover:bg-[#EDF2F7] p-2 cursor-pointer">
               <Gift className="text-[#FF3366] w-6 h-6" />
               <NavLink to="/uu-dai" className="font-400">
                 Mã giảm giá và ưu đãi
               </NavLink>
             </div>
-            <div className="hidden xl:flex gap-1 items-center">
+            <div className="hidden xl:flex gap-1 items-center cursor-pointer">
               <BriefcaseBusiness className="text-[#FF3366] w-6 h-6" />
               <NavLink
                 to="#"
@@ -131,25 +130,25 @@ const HeaderDesktop = forwardRef<HTMLDivElement>((_, ref) => {
                 Tìm kiếm đơn hàng
               </NavLink>
             </div>
-            <button className="flex gap-1 items-center font-semibold">
+            <button className="flex gap-1 items-center font-semibold hover:rounded-3xl hover:bg-[#EDF2F7] p-2 cursor-pointer">
               <img src={flag} alt="flag" className="w-5 h-5" />
               <span className="text-gray-600">VND</span>
               <ChevronDown className="w-4 h-4" />
             </button>
-            <div>
+            <div className="p-2 rounded-full bg-[#EDF2F7]">
               <Bell className="w-5 h-5" />
             </div>
-            <button className="text-sm font-medium text-white bg-[#FF3366] w-[100px] py-1 rounded-lg hover:bg-[#FF3366] h-10">
+            <button className="text-sm font-medium text-white bg-[#FF3366] w-[100px] py-1 rounded-lg h-10 cursor-pointer">
               Đăng nhập
             </button>
-            <button className="text-sm font-medium text-[#FF3366] border border-[#FF3366] w-[100px] py-1 rounded-lg hover:bg-pink-50 h-10">
+            <button className="text-sm font-medium text-[#FF3366] border border-[#FF3366] w-[100px] py-1 rounded-lg hover:bg-pink-50 h-10 hover:shadow-sm cursor-pointer">
               Đăng ký
             </button>
           </div>
         </div>
         {/* Sidebar button */}
-        <button className="ml-5" onClick={() => setMobileOpen(!mobileOpen)}>
-          <Menu size={28} />
+        <button className="ml-5" onClick={showDrawer}>
+          <Menu size={24} />
         </button>
       </div>
       {/* Links */}
@@ -209,9 +208,7 @@ const HeaderDesktop = forwardRef<HTMLDivElement>((_, ref) => {
         </div>
       </div>
 
-      {mobileOpen && (
-        <Sidebar isOpen={mobileOpen} closeSidebar={handleCloseSidebar} />
-      )}
+      <Sidebar isOpen={mobileOpen} closeSidebar={onClose} />
     </header>
   );
 });

@@ -106,9 +106,8 @@ const HeaderMobile = forwardRef<HTMLDivElement>((_, ref) => {
           <span className="font-semibold">Ưu đãi</span>
         </div>
       </div>
-      {mobileOpen && (
-        <Sidebar isOpen={mobileOpen} closeSidebar={handleCloseSidebar} />
-      )}
+
+      <Sidebar isOpen={mobileOpen} closeSidebar={handleCloseSidebar} />
     </>
   );
 });

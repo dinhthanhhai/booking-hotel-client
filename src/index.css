@@ -1,15 +1,26 @@
-@import "tailwindcss";
+@layer theme, base, antd, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
-  --color-primary: #f36;
+  /* Font family */
+  --font-family-sans: "Be Vietnam Pro", system-ui, sans-serif;
+
+  /* Font weight */
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+
+  /* Text sizes */
+  --text-xs: 10px;
+  --text-12: 12px;
+
+  /* Breakpoints */
   --breakpoint-xs: 480px;
   --breakpoint-omd: 820px;
   --breakpoint-base: 1366px;
   --breakpoint-3xl: 1920px;
-  --text-xs: 10px;
-  --text-12: 12px;
-  --font-400: 400;
-  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
 }
 
 @layer components {
