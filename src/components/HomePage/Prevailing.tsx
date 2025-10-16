@@ -43,7 +43,7 @@ const Prevailing: React.FC = () => {
         {/* Prev Button */}
         <button
           onClick={goPrev}
-          className="absolute top-[52%] -left-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
+          className="hidden omd:block absolute top-[52%] -left-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
         >
           <ChevronLeft className="w-5 h-5 text-gray-700" />
         </button>
@@ -51,7 +51,7 @@ const Prevailing: React.FC = () => {
         {/* Next Button */}
         <button
           onClick={goNext}
-          className="absolute top-[52%] -right-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
+          className="hidden omd:block absolute top-[52%] -right-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
         >
           <ChevronRight className="w-5 h-5 text-gray-700" />
         </button>

@@ -53,7 +53,7 @@ const HotelResultCard: React.FC<Props> = ({ className }) => {
         {loaded && slider.current && (
           <button
             onClick={goPrev}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
+            className="hidden omd:block absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
           >
             <ChevronLeft className="w-4 h-4 text-gray-700 hover:text-[#FF3366]" />
           </button>
@@ -63,7 +63,7 @@ const HotelResultCard: React.FC<Props> = ({ className }) => {
         {loaded && slider.current && (
           <button
             onClick={goNext}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
+            className="hidden omd:block absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
           >
             <ChevronRight className="w-4 h-4 text-gray-700 hover:text-[#FF3366]" />
           </button>
