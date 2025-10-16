@@ -1,13 +1,13 @@
 import SearchBar from "@/components/search/SearchBar";
 import CouponList from "@/components/HotelHomePage/CouponList";
 import FlashSale from "@/components/HomePage/FlashSale";
-// import HotelByLocation from "@/components/HomePage/HotelByLocation";
-// import Discover from "@/components/HomePage/Discover";
-// import MytourChoices from "@/components/HomePage/MytourChoices";
-// import Prevailing from "@/components/HomePage/Prevailing";
-// import RecentlyViewed from "@/components/HomePage/RecentlyViewed";
-// import StrategicPartner from "@/components/HomePage/StrategicPartner";
-// import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
+import HotelByLocation from "@/components/HomePage/HotelByLocation";
+import Discover from "@/components/HomePage/Discover";
+import MytourChoices from "@/components/HomePage/MytourChoices";
+import Prevailing from "@/components/HomePage/Prevailing";
+import RecentlyViewed from "@/components/HomePage/RecentlyViewed";
+import StrategicPartner from "@/components/HomePage/StrategicPartner";
+import ShockPriceHotels from "@/components/HomePage/ShockPriceHotels";
 import TopHotels from "@/components/HomePage/TopHotels";
 import MainHeader from "@/layouts/header/MainHeader";
 import SearchMobile from "@/components/search/SearchMobile";
@@ -24,13 +24,13 @@ export default function HomePage() {
         <CouponList />
       </div>
       <FlashSale />
-      {/* <HotelByLocation />
+      <HotelByLocation />
       <Discover />
       <MytourChoices />
       <Prevailing />
       <RecentlyViewed />
       <StrategicPartner />
-      <ShockPriceHotels /> */}
+      <ShockPriceHotels />
       <TopHotels />
       <div className="custom-page-padding pt-8 pb-5 bg-white">
         <div className="flex flex-col gap-5 lg:flex-row items-center rounded-2xl shadow-sm border-[1px] border-slate-100 px-6 py-5">

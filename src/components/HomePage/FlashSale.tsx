@@ -5,6 +5,8 @@ import "keen-slider/keen-slider.min.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const FlashSale: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [loaded, setLoaded] = React.useState(false);
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     slides: { perView: 4, spacing: 10 },
     breakpoints: {
@@ -17,6 +19,12 @@ const FlashSale: React.FC = () => {
       "(max-width: 640px)": {
         slides: { perView: 1, spacing: 10 },
       },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
     },
   });
 
@@ -105,9 +113,26 @@ const FlashSale: React.FC = () => {
         >
           <ChevronRight className="w-5 h-5 text-gray-700" />
         </button>
+
+        {/* Dots */}
+        {loaded && slider.current && (
+          <div className="omd:hidden absolute flex justify-center gap-2 mt-3 -bottom-3 left-1/2 -translate-x-1/2">
+            {Array.from(
+              Array(slider.current.track.details.slides.length).keys()
+            ).map((idx) => (
+              <button
+                key={idx}
+                onClick={() => slider.current?.moveToIdx(idx)}
+                className={`w-1 h-1 rounded-full ${
+                  currentSlide === idx ? "bg-slate-300" : "bg-white"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <div className="w-full mt-5 flex justify-center">
-        <button className="px-4 py-2 rounded-md border border-[#FF3366] text-[#FF3366]">
+        <button className="px-4 py-2 rounded-md border border-[#FF3366] text-[#FF3366] bg-white omd:bg-transparent">
           Xem thêm
         </button>
       </div>

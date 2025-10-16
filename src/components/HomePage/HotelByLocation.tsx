@@ -13,14 +13,11 @@ const HotelByLocation: React.FC = () => {
       "(max-width: 1024px)": {
         slides: { perView: 4, spacing: 10 },
       },
-      "(max-width: 768px)": {
+      "(max-width: 680px)": {
         slides: { perView: 3, spacing: 10 },
       },
-      "(max-width: 580px)": {
+      "(max-width: 520px)": {
         slides: { perView: 2, spacing: 10 },
-      },
-      "(max-width: 400px)": {
-        slides: { perView: 1, spacing: 10 },
       },
     },
   });

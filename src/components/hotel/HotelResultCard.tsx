@@ -49,6 +49,7 @@ const HotelResultCard: React.FC<Props> = ({ className }) => {
             </div>
           ))}
         </div>
+
         {/* Prev Button */}
         {loaded && slider.current && (
           <button
@@ -68,9 +69,10 @@ const HotelResultCard: React.FC<Props> = ({ className }) => {
             <ChevronRight className="w-4 h-4 text-gray-700 hover:text-[#FF3366]" />
           </button>
         )}
+
         {/* Dots */}
         {loaded && slider.current && (
-          <div className="absolute flex justify-center gap-2 mt-3 bottom-1 left-1/2 -translate-x-1/2">
+          <div className="omd:hidden absolute flex justify-center gap-2 mt-3 bottom-1 left-1/2 -translate-x-1/2">
             {Array.from(
               Array(slider.current.track.details.slides.length).keys()
             ).map((idx) => (
