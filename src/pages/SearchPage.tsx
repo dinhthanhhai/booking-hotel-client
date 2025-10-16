@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import Header from "@/layouts/header/Header";
 import MiniSearchBar from "@/components/SearchPage/MiniSearchBar";
 import Filter from "@/components/SearchPage/Filter";
 import HotelResultCard from "@/components/hotel/HotelResultCard";
@@ -75,13 +74,13 @@ export default function SearchPage() {
 
   return (
     <div className="bg-white w-full">
-      <div
+      {/* <div
         className={`transition-all duration-500 ${
           visible ? "opacity-100" : "opacity-0"
         }`}
       >
         <Header ref={headerRef} />
-      </div>
+      </div> */}
       <div
         className={`sticky inset-0 z-40 w-full ${visible ? "top-34" : "top-9"}`}
       >

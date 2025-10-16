@@ -24,16 +24,23 @@ const FlashSale: React.FC = () => {
   const goNext = () => slider.current?.next();
 
   return (
-    <div className="custom-page-padding pt-8 pb-10 bg-[#FFF5F7]">
+    <div className="custom-page-padding pt-8 pb-10 bg-linear-to-tr from-[#FE5F31] to-[#F23175] omd:bg-none omd:bg-[#FFF5F7]">
       <div className="flex gap-1 justify-between">
         <div>
           <img
             src="/images/flashsale.png"
             alt="flashsale"
-            className="w-[198px]"
+            className="w-[198px] hidden omd:block"
+          />
+          <img
+            src="/images/fsale.webp"
+            alt="flashsale"
+            className="w-[198px] block omd:hidden"
           />
           <div className="flex flex-col md:flex-row gap-2 font-bold">
-            <span className="font-normal">Chương trình sẽ kết thúc trong</span>
+            <span className="font-normal text-white omd:text-black">
+              Chương trình sẽ kết thúc trong
+            </span>
             <div className="flex gap-2">
               <span className="px-1 rounded-md bg-[#FF3366] text-white text-sm flex items-center">
                 00
@@ -86,7 +93,7 @@ const FlashSale: React.FC = () => {
         {/* Prev Button */}
         <button
           onClick={goPrev}
-          className="absolute top-[52%] -left-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
+          className="hidden omd:block absolute top-[52%] -left-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
         >
           <ChevronLeft className="w-5 h-5 text-gray-700" />
         </button>
@@ -94,7 +101,7 @@ const FlashSale: React.FC = () => {
         {/* Next Button */}
         <button
           onClick={goNext}
-          className="absolute top-[52%] -right-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
+          className="hidden omd:block absolute top-[52%] -right-5 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-sm hover:bg-gray-100"
         >
           <ChevronRight className="w-5 h-5 text-gray-700" />
         </button>

@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
-import Header from "@/layouts/header/Header";
 import MiniSearchBar from "@/components/SearchPage/MiniSearchBar";
 import { MapPin, Share, Heart } from "lucide-react";
+import MainHeader from "@/layouts/header/MainHeader";
 
 export default function HotelPage() {
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -63,13 +63,14 @@ export default function HotelPage() {
 
   return (
     <div className="bg-white w-full">
-      <div
+      {/* <div
         className={`transition-all duration-500 ${
           visible ? "opacity-100" : "opacity-0"
         }`}
       >
         <Header ref={headerRef} />
-      </div>
+      </div> */}
+      <MainHeader />
       <div
         className={`hidden md:block sticky inset-0 z-40 w-full ${
           visible ? "top-34" : "top-9"
