@@ -13,11 +13,14 @@ const HotelByLocation: React.FC = () => {
       "(max-width: 1024px)": {
         slides: { perView: 4, spacing: 10 },
       },
-      "(max-width: 680px)": {
-        slides: { perView: 3, spacing: 10 },
+      "(max-width: 820px)": {
+        slides: { perView: 5, spacing: 10 },
       },
-      "(max-width: 520px)": {
-        slides: { perView: 2, spacing: 10 },
+      "(max-width: 680px)": {
+        slides: { perView: 4, spacing: 10 },
+      },
+      "(max-width: 530px)": {
+        slides: { perView: 3, spacing: 10 },
       },
     },
   });
@@ -35,7 +38,7 @@ const HotelByLocation: React.FC = () => {
               key={i}
               className="keen-slider__slide flex flex-col items-center justify-center"
             >
-              <div className="w-32 h-32 rounded-full overflow-hidden">
+              <div className="w-26 h-26 omd:w-32 omd:h-32 rounded-full overflow-hidden">
                 <img
                   src="/images/nha-trang.webp"
                   alt="city images"

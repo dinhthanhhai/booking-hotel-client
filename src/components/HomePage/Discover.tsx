@@ -9,11 +9,11 @@ const Discover: React.FC = () => {
       <div className="text-slate-500">
         Nâng tầm du lịch với các top thương hiệu khách sạn, biệt thự hàng đầu
       </div>
-      <div className="mt-4 flex flex-col items-center sm:grid sm:grid-cols-2 md:flex md:flex-row gap-5">
+      <div className="mt-4 flex flex-col xs:px-10 sm:px-0 items-center sm:grid sm:grid-cols-2 md:flex md:flex-row gap-5">
         {/* Top thương hiệu */}
         <Link
           to={"/top-thuong-hieu"}
-          className="flex flex-col max-w-[280px] shadow-sm rounded-b-lg"
+          className="flex flex-col w-full omd:max-w-[280px] shadow-sm rounded-b-lg"
         >
           <div className="h-[160px] overflow-hidden rounded-t-lg relative">
             <img
@@ -39,7 +39,7 @@ const Discover: React.FC = () => {
         {/* Homestay, biệt thự */}
         <Link
           to={"/homestay"}
-          className="flex flex-col max-w-[280px] shadow-sm rounded-b-lg"
+          className="flex flex-col w-full omd:max-w-[280px] shadow-sm rounded-b-lg"
         >
           <div className="h-[160px] overflow-hidden rounded-t-lg relative">
             <img
@@ -65,7 +65,7 @@ const Discover: React.FC = () => {
         {/* Mytour lựa chọn */}
         <Link
           to={"/mytour-choices"}
-          className="flex flex-col max-w-[280px] shadow-sm rounded-b-lg"
+          className="flex flex-col w-full omd:max-w-[280px] shadow-sm rounded-b-lg"
         >
           <div className="h-[160px] overflow-hidden rounded-t-lg relative">
             <img

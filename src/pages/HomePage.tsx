@@ -16,6 +16,9 @@ export default function HomePage() {
       <SearchFull />
       <SlideCoupon />
       <FlashSale />
+      <div className="pt-5 omd:hidden">
+        <img src="/banner/biz-af.webp" alt="banner" />
+      </div>
       <ListFlight />
       <ShockPriceHotels />
       <MytourMall />
