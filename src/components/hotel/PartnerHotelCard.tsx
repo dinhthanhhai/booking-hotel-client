@@ -41,7 +41,7 @@ const PartnerHotelCard: React.FC<Props> = ({ className }) => {
           </span>
         </span>
         <div className="flex items-center gap-2 mt-1 whitespace-nowrap overflow-hidden text-ellipsis">
-          <div className="flex items-center px-1 bg-[#FFE1E8] rounded-md flex-shrink-0">
+          <div className="flex items-center px-1 bg-[#FFE1E8] rounded-md shrink-0">
             <img
               src="/icons/umbrella-solid-full.svg"
               alt="icon"

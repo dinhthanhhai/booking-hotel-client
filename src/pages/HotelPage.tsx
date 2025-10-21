@@ -2,6 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import MiniSearchBar from "@/components/SearchPage/MiniSearchBar";
 import { MapPin, Share, Heart } from "lucide-react";
 import MainHeader from "@/layouts/header/MainHeader";
+import { Breadcrumb } from "antd";
+import ListImages from "@/components/HotelPage/ListImages";
+import HotelInfo from "@/components/HotelPage/HotelInfo";
 
 export default function HotelPage() {
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -63,17 +66,10 @@ export default function HotelPage() {
 
   return (
     <div className="bg-white w-full">
-      {/* <div
-        className={`transition-all duration-500 ${
-          visible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Header ref={headerRef} />
-      </div> */}
       <MainHeader />
       <div
         className={`hidden md:block sticky inset-0 z-40 w-full ${
-          visible ? "top-34" : "top-9"
+          visible ? "" : "top-9"
         }`}
       >
         <MiniSearchBar ref={searchRef} />
@@ -82,27 +78,41 @@ export default function HotelPage() {
         className="px-[5%] lg:custom-page-padding bg-[#FAFCFF] h-[1000px]"
         style={{ marginTop: visible ? headerHeight : searchHeight }}
       >
-        <div>
-          <span>Khách sạn</span>
-          <span>{">"}</span>
-          <span>Bình Thuận</span>
-          <span>{">"}</span>
-          <span>Thành Phố Phan Thiết</span>
-          <span>{">"}</span>
-          <span>Centara Mirage Resort Mũi Né</span>
-        </div>
-        <div>
-          <span>Công viên nước</span>
-          <span>Sát biển</span>
+        <Breadcrumb
+          className="text-12"
+          items={[
+            {
+              title: "Khách sạn",
+            },
+            {
+              title: <a href="">Bình Thuận</a>,
+            },
+            {
+              title: <a href="">Thành Phố Phan Thiết</a>,
+            },
+            {
+              title: "Centara Mirage Resort Mũi Né",
+            },
+          ]}
+        />
+        <div className="flex gap-3 mt-3">
+          <span className="px-2 py-1 text-white bg-[#FFBC39] rounded-md font-semibold">
+            Công viên nước
+          </span>
+          <span className="px-2 py-1 text-white bg-[#00B6F3] rounded-md font-semibold">
+            Sát biển
+          </span>
         </div>
         <div className="flex justify-between">
-          <h1 className="flex-1">Centara Mirage Resort Mũi Né</h1>
-          <div className="flex gap-2">
-            <div className="flex gap-1">
+          <h1 className="flex-1 mt-2 font-semibold text-3xl">
+            Centara Mirage Resort Mũi Né
+          </h1>
+          <div className="flex gap-5 text-lg text-slate-800">
+            <div className="flex gap-1 items-center">
               <span>Lưu</span>
               <Heart />
             </div>
-            <div className="flex gap-1">
+            <div className="flex gap-1 items-center">
               <span>Chia sẻ</span>
               <Share />
             </div>
@@ -113,7 +123,7 @@ export default function HotelPage() {
             <img key={i} src="/icons/star-solid-full.svg" alt="icon" />
           ))}
         </div>
-        <div className="flex">
+        <div className="flex mt-1">
           <div className="flex-1">
             <div className="flex items-center gap-2 mt-1">
               <div className="flex items-center px-1 bg-[#FFE1E8] rounded-md">
@@ -126,7 +136,7 @@ export default function HotelPage() {
               </div>
               <span>Tuyệt vời</span>
               <span className="text-slate-700">(28 đánh giá)</span>
-              <span className="text-blue-600">Xem đánh giá</span>
+              <span className="text-[#00C5F8]">Xem đánh giá</span>
             </div>
             <div className="flex items-center gap-1 mt-1">
               <MapPin className="w-4 h-4 text-slate-500" />
@@ -134,7 +144,7 @@ export default function HotelPage() {
                 Huỳnh Thúc Kháng, Hàm Tiến, Thành Phố Phan Thiết, Bình Thuận,
                 Việt Nam
               </span>
-              <span className="text-blue-600">Xem bản đồ</span>
+              <span className="text-[#00C5F8]">Xem bản đồ</span>
             </div>
           </div>
           <div className="flex gap-4 items-center">
@@ -147,64 +157,13 @@ export default function HotelPage() {
               </div>
               <span className="text-xl font-semibold ml-auto">1.748.444 ₫</span>
             </div>
-            <button className="text-white font-semibold rounded-md bg-[#FF3366] px-4 py-2">
+            <button className="text-white font-semibold rounded-md bg-[#FF3366] px-6 py-2 text-lg">
               Chọn phòng
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-x-2 rounded-lg overflow-hidden">
-          <div className="col-span-1 row-span-2 relative">
-            {/* Nếu là video */}
-            {/* <video controls className="w-full h-full object-cover">
-              <source src="/videos/demo.mp4" type="video/mp4" />
-            </video> */}
-            {/* Nếu là ảnh */}
-            <img
-              src="/images/hotel.webp"
-              alt="main"
-              className="w-full h-full object-cover"
-            />
-            {/* icon play nếu là video */}
-            {/* <div className="absolute bottom-2 left-2 bg-black bg-opacity-50 rounded-full p-2">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M6 4l12 6-12 6V4z" />
-              </svg>
-            </div> */}
-          </div>
-          {/* 4 ảnh nhỏ bên phải */}
-          <div className="grid grid-cols-2 grid-rows-2 gap-2">
-            <img
-              src="/images/hotel.webp"
-              alt="img1"
-              className="w-full h-full object-cover"
-            />
-            <img
-              src="/images/hotel.webp"
-              alt="img2"
-              className="w-full h-full object-cover"
-            />
-            <img
-              src="/images/hotel.webp"
-              alt="img3"
-              className="w-full h-full object-cover"
-            />
-            <div className="relative">
-              <img
-                src="/images/hotel.webp"
-                alt="img4"
-                className="w-full h-full object-cover"
-              />
-              {/* overlay số lượng còn lại */}
-              <div className="absolute inset-0 bg-black/20 bg-opacity-40 flex items-center justify-center text-white font-semibold text-xl">
-                +40
-              </div>
-            </div>
-          </div>
-        </div>
+        <ListImages />
+        <HotelInfo />
       </div>
     </div>
   );

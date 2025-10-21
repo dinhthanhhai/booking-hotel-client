@@ -60,3 +60,30 @@
 @utility custom-page-margin {
   @apply mx-4 omd:mx-[8%] xl:mx-[12%];
 }
+
+.scroll-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #ff3366 #f1f1f1;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ff3366;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #e62e5c;
+  }
+}
+
+.custom-modal {
+  overflow: hidden !important;
+}
+.custom-modal .ant-modal-content {
+  padding: 0px 10px 10px 5px;
+}

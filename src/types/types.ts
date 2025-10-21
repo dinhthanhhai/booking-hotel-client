@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface HeaderLink {
   name: string;
   url: string;
@@ -25,4 +27,10 @@ export interface City {
 export interface SimpleType {
   id: number;
   name: string;
+}
+
+export interface Amenity {
+  id: number;
+  name: string;
+  icon: LucideIcon;
 }
